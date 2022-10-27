@@ -1,15 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import NavigationBar from './services/navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Initial Page
-        </p>
-      </header>
+      <NavigationBar></NavigationBar>
     </div>
   );
 }
