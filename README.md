@@ -4,15 +4,15 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do projeto
+# LION HUNT
 
-## Change IT
+## LIONDEVS
 
 ## Integrantes: 
-- <a href="https://www.linkedin.com/in/alexandrefonseca00/"> Alexandre Fonseca </a> 
+- <a href="https://www.linkedin.com/in/alexandrefonseca00/"> Alexandre Fonseca </a>
 - <a href="https://www.linkedin.com/in/felipe-le%C3%A3o-9a8a601a6/"> Felipe leão </a>
-- <a href="#"> Lucas Pereira </a>
-- <a href="#"> Matheus Neves </a>
+- <a href="https://www.linkedin.com/in/lucas-conti-pereira-3410b1233/"> Lucas Pereira </a>
+- <a href="https://www.linkedin.com/in/mateus-neves-3b767123b/"> Matheus Neves </a>
 - <a href="https://www.linkedin.com/in/patrick-victorino-miranda-7ab911231/"> Patrick Victorino Miranda </a>
 - <a href="#"> Stefano Tinelli </a>
 - <a href="https://www.linkedin.com/in/vinicius-oliveira-fernandes-627b68168/"> Vinicius Oliveira Fernandes </a>
@@ -50,11 +50,12 @@ PlaceHolder
 
 ## 🗃 Histórico de lançamentos
 
-1.0 - Upload realizado em 21/10/2022
-2.0 - Previsto para 04/11/2022
-3.0 - Previsto para 18/11/2022
-4.0 - Previsto para 02/12/2022
-5.0 - Previsto para 15/12/2022
+* 1.0 - Entendimento do Negócio 21/10/2022
+  * Definição da arquitetura da solução, pesquisa de contexto do parceiro e estruturação da plataforma
+* 2.0 - Previsto para 04/11/2022
+* 3.0 - Previsto para 18/11/2022
+* 4.0 - Previsto para 02/12/2022
+* 5.0 - Previsto para 15/12/2022
 
 ## 📋 Licença/License
 
@@ -62,4 +63,8 @@ PlaceHolder
 
 ## 🎓 Referências
 
-PlaceHolder
+INTERNATIONAL BACCALAUREATE ORGANIZATION. About the IB. Disponível em:
+[https://www.ibo.org/about-the-ib/](https://www.ibo.org/about-the-ib/). Acesso em: 14/10/2022.
+
+BEACON SCHOOL. Bem-vindos à Beacon. Disponível em: [https://www.beaconschool.com](https://www.beaconschool.com/).
+br/quem-somos/bem-vindos-a-beacon/. Acesso em: 14/10/2022.
