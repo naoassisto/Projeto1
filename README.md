@@ -50,7 +50,7 @@ PlaceHolder
 
 ## 🗃 Histórico de lançamentos
 
-* 1.0 - Entendimento do Negócio 21/10/2022
+* 1.0 - Entendimento do Negócio (21/10/2022)
   * Definição da arquitetura da solução, pesquisa de contexto do parceiro e estruturação da plataforma
 * 2.0 - Previsto para 04/11/2022
 * 3.0 - Previsto para 18/11/2022
