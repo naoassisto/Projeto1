@@ -1,14 +1,19 @@
 // #include <LiquidCrystal_I2C.h>
+// Importação de bibliotecas para utilizar sensores e módulos
 #include <Wire.h>
 #include <MFRC522.h>
 #include <SPI.h>
+// Definição de Pinos do ESP
 #define RFID_SS_SDA   21
 #define RFID_RST      14
 
 int LED = 36;
 
+// Entrada da Tag e do Reader como parâmetros
 
 MFRC522 rfidBase = MFRC522(RFID_SS_SDA, RFID_RST);
+
+// Classe relacionada à leitura do RFID, consegue declarar variáveis públicas, a serem utilizadas em qualquer lugar do código e podendo ser instaciadas
 class LeitorRFID{
   private:
     char codigoRFIDLido[100] = "";
@@ -16,6 +21,7 @@ class LeitorRFID{
     MFRC522 *rfid = NULL;
     int cartaoDetectado = 0;
     int cartaoJaLido = 0;
+    // Processa o Código lido do RFID e o tempo
     void processaCodigoLido(){
       char codigo[3*rfid->uid.size+1];
       codigo[0] = 0;
@@ -28,12 +34,14 @@ class LeitorRFID{
       strcpy(codigoRFIDLido,codigo);
       Serial.println(codigoRFIDLido);
     }
+  // Inicialização do PCD e print de atributos do leitor
   public:
     LeitorRFID(MFRC522 *leitor){
       rfid = leitor;
       rfid->PCD_Init(); 
       Serial.printf("MOSI: %i MISO: %i SCK: %i SS: %i\n",MOSI,MISO,SCK,SS);
     };
+    // Leitura do Tipo do Cartão
     char *tipoCartao(){
       MFRC522::PICC_Type piccType = rfid->PICC_GetType(rfid->uid.sak);
       Serial.println(rfid->PICC_GetTypeName(piccType));
@@ -45,6 +53,7 @@ class LeitorRFID{
     int cartaoFoiLido(){
       return(cartaoJaLido);
     };
+
     void leCartao(){
       if (rfid->PICC_IsNewCardPresent()) { // new tag is available
         Serial.println("Cartao presente");
@@ -63,6 +72,7 @@ class LeitorRFID{
     char *cartaoLido(){
       return(codigoRFIDLido);
     };
+    // Define as variáveis com o valor igual a 0 com a finalidade de resetar
     void resetarLeitura(){
       cartaoDetectado = 0;
       cartaoJaLido = 0;
