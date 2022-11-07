@@ -1,0 +1,145 @@
+// #include <LiquidCrystal_I2C.h>
+// Importação de bibliotecas para utilizar sensores e módulos
+#include <Wire.h>
+#include <MFRC522.h>
+#include <SPI.h>
+// Definição de Pinos do ESP
+#define RFID_SS_SDA   21
+#define RFID_RST      14
+
+int LED = 36;
+
+// Entrada da Tag e do Reader como parâmetros
+
+MFRC522 rfidBase = MFRC522(RFID_SS_SDA, RFID_RST);
+
+// Classe relacionada à leitura do RFID, consegue declarar variáveis públicas, a serem utilizadas em qualquer lugar do código e podendo ser instaciadas
+class LeitorRFID{
+  private:
+    char codigoRFIDLido[100] = "";
+    char codigoRFIDEsperado[100] = "";
+    MFRC522 *rfid = NULL;
+    int cartaoDetectado = 0;
+    int cartaoJaLido = 0;
+    // Processa o Código lido do RFID e o tempo
+    void processaCodigoLido(){
+      char codigo[3*rfid->uid.size+1];
+      codigo[0] = 0;
+      char temp[10];  
+      for(int i=0; i < rfid->uid.size; i++){
+        sprintf(temp,"%X",rfid->uid.uidByte[i]);
+        strcat(codigo,temp);
+      }
+      codigo[3*rfid->uid.size+1] = 0;    
+      strcpy(codigoRFIDLido,codigo);
+      Serial.println(codigoRFIDLido);
+    }
+  // Inicialização do PCD e print de atributos do leitor
+  public:
+    LeitorRFID(MFRC522 *leitor){
+      rfid = leitor;
+      rfid->PCD_Init(); 
+      Serial.printf("MOSI: %i MISO: %i SCK: %i SS: %i\n",MOSI,MISO,SCK,SS);
+    };
+    // Leitura do Tipo do Cartão
+    char *tipoCartao(){
+      MFRC522::PICC_Type piccType = rfid->PICC_GetType(rfid->uid.sak);
+      Serial.println(rfid->PICC_GetTypeName(piccType));
+      return((char *)rfid->PICC_GetTypeName(piccType));
+    };
+    int cartaoPresente(){
+      return(cartaoDetectado);
+    };
+    int cartaoFoiLido(){
+      return(cartaoJaLido);
+    };
+
+    void leCartao(){
+      if (rfid->PICC_IsNewCardPresent()) { // Nova tag disponivel
+        Serial.println("Cartao presente");
+        cartaoDetectado = 1;
+        if (rfid->PICC_ReadCardSerial()) { // O id foi lido   
+          Serial.println("Cartao lido");  
+          cartaoJaLido = 1;
+          processaCodigoLido();
+          rfid->PICC_HaltA(); 
+          rfid->PCD_StopCrypto1(); 
+        }
+      }else{
+        cartaoDetectado = 0;
+      }
+    };
+    char *cartaoLido(){
+      return(codigoRFIDLido);
+    };
+    // Define as variáveis com o valor igual a 0 com a finalidade de resetar
+    void resetarLeitura(){
+      cartaoDetectado = 0;
+      cartaoJaLido = 0;
+    }
+    void listI2CPorts(){
+      Serial.println("\nI2C Scanner");
+      byte error, address;
+      int nDevices;
+      Serial.println("Scanning...");
+      nDevices = 0;
+      for(address = 1; address < 127; address++ ) {
+        Wire.beginTransmission(address);
+        error = Wire.endTransmission();
+        if (error == 0) {
+          Serial.print("I2C device found at address 0x");
+          if (address<16) {
+            Serial.print("0");
+          }
+          Serial.println(address,HEX);
+          nDevices++;
+        }
+        else if (error==4) {
+          Serial.print("Unknow error at address 0x");
+          if (address<16) {
+            Serial.print("0");
+          }
+          Serial.println(address,HEX);
+        }    
+      }
+      if (nDevices == 0) {
+        Serial.println("No I2C devices found\n");
+      }
+      else {
+        Serial.println("done\n");
+      }
+    };
+};
+LeitorRFID *leitor = NULL;
+//////////////////////////////
+void setup() {
+  Serial.begin(115200);
+  SPI.begin();
+  pinMode(LED, OUTPUT);
+  //------------------------//
+  leitor = new LeitorRFID(&rfidBase);
+  //------------------------//  
+  // Serial.print("MOSI: "); Serial.println(MOSI);
+  // Serial.print("MISO: "); Serial.println(MISO);
+  // Serial.print("SCK: "); Serial.println(SCK);
+  // Serial.print("SS: "); Serial.println(SS);
+}
+void loop() {
+  //leitura do cartão
+  Serial.println("Lendo Cartao:");
+  leitor->leCartao();
+  //se o cartão foi lido
+  if(leitor->cartaoFoiLido()){
+    //printa o tipo do cartão
+    Serial.println(leitor->tipoCartao());
+    // printa o id do cartão
+    Serial.println(leitor->cartaoLido());
+    leitor->resetarLeitura();
+    //acende o led
+    digitalWrite(LED,HIGH);
+    delay(2000);
+    //apaga o led
+    digitalWrite(LED,LOW);
+    delay(1000);
+  }
+}
