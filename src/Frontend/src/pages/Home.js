@@ -1,6 +1,7 @@
 import NavigationBar from "../services/navbar";
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import { Typography } from "@mui/material";
 
 function Home() {
     return (
@@ -18,7 +19,9 @@ function Home() {
             </Box>
             <Box sx={{ flexGrow: 0, bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', top:'657px', left:'879px' }}>
                 <div>
-                    <Button size="large" sx={{color:"#000000"}}>Gerar Relatórios</Button>
+                    <Button size="large" sx={{color:"#000000"}}>
+                        <Typography>Gerar Relatórios</Typography>
+                    </Button>
                 </div>
             </Box>
         </>
