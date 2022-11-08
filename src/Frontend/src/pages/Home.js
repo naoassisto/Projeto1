@@ -1,29 +1,28 @@
 import NavigationBar from "../services/navbar";
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 import { Typography } from "@mui/material";
 
 function Home() {
     return (
         <>
         <NavigationBar></NavigationBar>
-            <Box sx={{ flexGrow: 0, bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', top:'657px', left:'95px' }}>
-                <div>
-                    <Button size="large" sx={{color:"#000000"}}>Adicionar Dispositivo</Button>
-                </div>
-            </Box>
-            <Box sx={{ flexGrow: 0, bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', top:'657px', left:'483px' }}>
-                <div>
-                    <Button size="large" sx={{color:"#000000"}}>Rastrear Dispositivos</Button>
-                </div>
-            </Box>
-            <Box sx={{ flexGrow: 0, bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', top:'657px', left:'879px' }}>
-                <div>
-                    <Button size="large" sx={{color:"#000000"}}>
-                        <Typography>Gerar Relatórios</Typography>
-                    </Button>
-                </div>
-            </Box>
+        <div>
+                <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px',display:'inline-block', mt:'657px', ml:'95px' }}>
+                    <Typography sx={{color:'#000000'}}>
+                        Adicionar Dispositivo
+                    </Typography>
+                </Button>
+                <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'657px', ml:'95px'}}>
+                    <Typography sx={{color:'#000000'}}>
+                        Adicionar Dispositivo
+                    </Typography>
+                </Button>
+                <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'657px', ml:'95px'}}>
+                    <Typography sx={{color:'#000000'}}>
+                        Adicionar Dispositivo
+                    </Typography>
+                </Button>
+        </div>
         </>
     );
   }

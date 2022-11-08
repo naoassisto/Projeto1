@@ -12,14 +12,14 @@ function SelectRastreio() {
                     Abaixo, escolha uma das opções para visualizar os ativos
                 </Typography>
             </Box>
-            <Box sx={{ flexGrow: 0, bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', top:'657px', left:'879px' }}>
+            <Box sx={{ flexGrow: 0, bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', paddingTop:'379px', paddingLeft:'336px' }}>
                 <div>
                     <Button size="large" sx={{color:"#000000"}}>
                         <Typography>Ativos Eletrônicos</Typography>
                     </Button>
                 </div>
             </Box>
-            <Box sx={{ flexGrow: 0, bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', top:'657px', left:'879px' }}>
+            <Box sx={{ flexGrow: 0, bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', paddingTop:'561px', paddingLeft:'336px' }}>
                 <div>
                     <Button size="large" sx={{color:"#000000"}}>
                         <Typography>Ativos Mobiliários</Typography>
