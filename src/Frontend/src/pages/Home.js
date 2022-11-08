@@ -7,19 +7,19 @@ function Home() {
         <>
         <NavigationBar></NavigationBar>
         <div>
-                <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px',display:'inline-block', mt:'657px', ml:'95px' }}>
+                <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px',display:'inline-block', mt:'549px', ml:'95px' }}>
                     <Typography sx={{color:'#000000'}}>
                         Adicionar Dispositivo
                     </Typography>
                 </Button>
-                <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'657px', ml:'95px'}}>
+                <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'549px', ml:'95px'}}>
                     <Typography sx={{color:'#000000'}}>
-                        Adicionar Dispositivo
+                        Rastrear Dispositivos
                     </Typography>
                 </Button>
-                <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'657px', ml:'95px'}}>
+                <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'549px', ml:'95px'}}>
                     <Typography sx={{color:'#000000'}}>
-                        Adicionar Dispositivo
+                        Gerar Relatórios
                     </Typography>
                 </Button>
         </div>
