@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Home from './pages/Home';
+import SelectRastreio from './pages/SelecaoRastreio';
+import Relatorios from './pages/Relatorios';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+    <Relatorios />
   </React.StrictMode>
 );
 
