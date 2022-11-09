@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import SelectRastreio from './pages/SelecaoRastreio';
-import Relatorios from './pages/Relatorios';
+import MainRastreio from './pages/PrincipalRastreio';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Relatorios />
+    <MainRastreio />
   </React.StrictMode>
 );
 
