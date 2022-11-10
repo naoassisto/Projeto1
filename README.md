@@ -52,7 +52,8 @@ PlaceHolder
 
 * 1.0 - Entendimento do Negócio (21/10/2022)
   * Definição da arquitetura da solução, pesquisa de contexto do parceiro e estruturação da plataforma
-* 2.0 - Previsto para 04/11/2022
+* 2.0 - (05/11/2022)
+	*Adição de um wireframe, da futura interface web do projeto, segunda versão da arquitetura da solução e testes do prototipo inicial
 * 3.0 - Previsto para 18/11/2022
 * 4.0 - Previsto para 02/12/2022
 * 5.0 - Previsto para 15/12/2022

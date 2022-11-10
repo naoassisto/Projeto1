@@ -55,15 +55,15 @@ class LeitorRFID{
     };
 
     void leCartao(){
-      if (rfid->PICC_IsNewCardPresent()) { // new tag is available
+      if (rfid->PICC_IsNewCardPresent()) { // Nova tag disponivel
         Serial.println("Cartao presente");
         cartaoDetectado = 1;
-        if (rfid->PICC_ReadCardSerial()) { // NUID has been readed      
+        if (rfid->PICC_ReadCardSerial()) { // O id foi lido   
           Serial.println("Cartao lido");  
           cartaoJaLido = 1;
           processaCodigoLido();
-          rfid->PICC_HaltA(); // halt PICC
-          rfid->PCD_StopCrypto1(); // stop encryption on PCD
+          rfid->PICC_HaltA(); 
+          rfid->PCD_StopCrypto1(); 
         }
       }else{
         cartaoDetectado = 0;
@@ -125,14 +125,20 @@ void setup() {
   // Serial.print("SS: "); Serial.println(SS);
 }
 void loop() {
+  //leitura do cartão
   Serial.println("Lendo Cartao:");
   leitor->leCartao();
+  //se o cartão foi lido
   if(leitor->cartaoFoiLido()){
+    //printa o tipo do cartão
     Serial.println(leitor->tipoCartao());
+    // printa o id do cartão
     Serial.println(leitor->cartaoLido());
     leitor->resetarLeitura();
+    //acende o led
     digitalWrite(LED,HIGH);
     delay(2000);
+    //apaga o led
     digitalWrite(LED,LOW);
     delay(1000);
   }
