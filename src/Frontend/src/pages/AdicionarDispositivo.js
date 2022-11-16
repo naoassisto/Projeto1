@@ -12,12 +12,12 @@ function AdicionarDispositivo() {
             </Typography>
             <TextField variant="filled" color="success" sx={{border:'2px solid #000000',backgroundColor:'#ffff', borderRadius:'7px', width:'514px', height:'42px', ml:'467px'}} />
 
-            <Typography sx={{height:'28px', width:'319px', mt:'150px', ml:'121px', fontFamily: 'Inter', fontSize: '30px', fontWeight: '400', lineHeight: '36px', letterSpacing: '0em', align: 'left'}}>
+            <Typography sx={{height:'28px', width:'319px', mt:'59px', ml:'121px', fontFamily: 'Inter', fontSize: '30px', fontWeight: '400', lineHeight: '36px', letterSpacing: '0em', align: 'left'}}>
                 ID do dispositivo
             </Typography>
             <TextField variant="filled" color="success" sx={{border:'2px solid #000000',backgroundColor:'#ffff', borderRadius:'7px', width:'514px', height:'42px', ml:'467px'}} />
 
-            <Typography sx={{height:'28px', width:'319px', mt:'150px', ml:'121px', fontFamily: 'Inter', fontSize: '30px', fontWeight: '400', lineHeight: '36px', letterSpacing: '0em', align: 'left'}}>
+            <Typography sx={{height:'28px', width:'319px', mt:'50px', ml:'121px', fontFamily: 'Inter', fontSize: '30px', fontWeight: '400', lineHeight: '36px', letterSpacing: '0em', align: 'left'}}>
                 Tag do dispositivo
             </Typography>
             <TextField variant="filled" color="success" sx={{border:'2px solid #000000',backgroundColor:'#ffff', borderRadius:'7px', width:'514px', height:'42px', ml:'467px'}} />

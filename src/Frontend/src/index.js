@@ -5,10 +5,26 @@ import reportWebVitals from './reportWebVitals';
 import MainRastreio from './pages/PrincipalRastreio';
 import Home from './pages/Home'
 import SelectRastreio from './pages/SelecaoRastreio'
+import Graphicss from './pages/Graphics'
+import AdicionarDispositivo from './pages/AdicionarDispositivo';
+
+import * as AWS from 'aws-sdk'
+import { ConfigurationOptions } from 'aws-sdk'
+
+
+const configuration = ConfigurationOptions = {
+    region: 'YOUR_REGION',
+    secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
+    accessKeyId: 'YOUR_ACCESS_KEY_ID'
+}
+
+AWS.config.update(configuration)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <SelectRastreio />
+    <Home />
   </React.StrictMode>
 );
 

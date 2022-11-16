@@ -1,6 +1,7 @@
 import NavigationBar from "../services/navbar";
 import Button from '@mui/material/Button';
 import { Typography } from "@mui/material";
+import { fetchData } from '../services/AwsFunction';
 
 function Home() {
         // constructor(props) {
@@ -18,22 +19,25 @@ function Home() {
         //     this.callAPI();
         // }
     // render(){
+        const fetchDataFormDynamoDb = () => {
+            fetchData('users')
+          }
         return (
             <>
             <NavigationBar></NavigationBar>
             <div>
                     <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px',display:'inline-block', mt:'549px', ml:'95px' }}>
-                        <Typography sx={{color:'#000000'}}>
+                        <Typography sx={{color:'#FFFFFF'}}>
                             Adicionar Dispositivo
                         </Typography>
                     </Button>
                     <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'549px', ml:'95px'}}>
-                        <Typography sx={{color:'#000000'}}>
+                        <Typography sx={{color:'#FFFFFF'}}>
                             Rastrear Dispositivos
                         </Typography>
                     </Button>
-                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'549px', ml:'95px'}}>
-                        <Typography sx={{color:'#000000'}}>
+                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'549px', ml:'95px'}} onClick={() => fetchDataFormDynamoDb()}>
+                        <Typography sx={{color:'#'}}>
                             Gerar Relatórios
                         </Typography>
                     </Button>
@@ -44,4 +48,4 @@ function Home() {
     
 //   }
   
-  export default Home;
+export default Home;

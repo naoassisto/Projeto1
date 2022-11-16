@@ -14,12 +14,12 @@ function SelectRastreio() {
         </Box>
         <div>
             <Button sx={{ bgcolor:"#096C86", borderRadius:'90px', width:'592px', height:'87px', mt:'186px', ml:'336px', display:'block' }}>
-                <Typography sx={{color:'#000000', fontFamily:'Manrope'}}>
+                <Typography sx={{color:'#FFFFFF', fontFamily:'Manrope'}}>
                     Ativos Eletrônicos
                 </Typography>
             </Button>
             <Button sx={{ bgcolor:"#096C86", borderRadius:'90px', width:'592px', height:'87px', mt:'95px', ml:'336px', display:'block'}}>
-                <Typography sx={{color:'#000000', fontFamily:'Manrope'}}>
+                <Typography sx={{color:'#FFFFFF', fontFamily:'Manrope'}}>
                     Ativos Mobiliários
                 </Typography>
             </Button>
