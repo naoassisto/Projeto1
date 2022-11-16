@@ -1,11 +1,11 @@
-const hostname = '127.0.0.1'; // IP Adress
-const port = 3030; // Door
-
-var express = require(“express”);
+const express = require('express');
 var router = express.Router();
 
-var http = require('http');
-var path = require("path");
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+const app = express();
+const port = 3000;
 
 
 // app.get("/readAWSData", (req, res) => { // Método Get, pega as informações disponíveis no EndPoint, sendo assim, é possível pegar os dados enviados da Aws para esse EndPoint
