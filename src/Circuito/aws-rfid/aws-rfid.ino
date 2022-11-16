@@ -13,10 +13,13 @@
 #define RFID_SS_SDA   21
 #define RFID_RST      14
 
+int buzzer = 16;
 int LED = 36;
+int LED2 = 41;
 char* h;
 
 MFRC522 rfidBase = MFRC522(RFID_SS_SDA, RFID_RST);
+
 
 // Classe relacionada à leitura do RFID, consegue declarar variáveis públicas, a serem utilizadas em qualquer lugar do código e podendo ser instaciadas
 class LeitorRFID{
@@ -119,6 +122,7 @@ LeitorRFID *leitor = NULL;
 
 
 
+
 ///////////////////////////////////////////////////////////////////// 
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
@@ -132,8 +136,11 @@ void connectAWS()
  
   while (WiFi.status() != WL_CONNECTED)
   {
-    delay(500);
+    digitalWrite(LED2,HIGH);
+    delay(400);
     Serial.print(".");
+    digitalWrite(LED2,LOW);
+    delay(400);
   }
  
   // Configure WiFiClientSecure to use the AWS IoT device credentials
@@ -151,8 +158,11 @@ void connectAWS()
  
   while (!client.connect(THINGNAME))
   {
+    digitalWrite(LED2,HIGH);
     Serial.print(".");
-    delay(100);
+    delay(400);
+    digitalWrite(LED2,LOW);
+    delay(400);
   }
  
   if (!client.connected())
@@ -165,6 +175,9 @@ void connectAWS()
   client.subscribe(AWS_IOT_SUBSCRIBE_TOPIC);
  
   Serial.println("AWS IoT Connected!");
+  digitalWrite(LED2,HIGH);
+  tone(buzzer,2000,200);
+  tone(buzzer,2500,200);
   
 }
  
@@ -192,9 +205,11 @@ void messageHandler(char* topic, byte* payload, unsigned int length)
 void setup()
 {
   Serial.begin(115200);
-  connectAWS();
-  SPI.begin();
+  pinMode(buzzer, OUTPUT);
   pinMode(LED, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  connectAWS();
+  SPI.begin();  
   leitor = new LeitorRFID(&rfidBase);
 }
  
