@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MainRastreio from './pages/PrincipalRastreio';
-
-
+import Home from './pages/Home'
+import SelectRastreio from './pages/SelecaoRastreio'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MainRastreio />
+    <SelectRastreio />
   </React.StrictMode>
 );
 
