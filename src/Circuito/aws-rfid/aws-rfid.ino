@@ -1,4 +1,4 @@
-// Inpotação das blibliotecas
+// Importação das blibliotecas
 #include "Secrets.h"
 #include <WiFiClientSecure.h>
 #include <PubSubClient.h>

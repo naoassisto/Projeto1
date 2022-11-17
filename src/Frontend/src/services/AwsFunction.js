@@ -1,7 +1,7 @@
 import * as AWS from 'aws-sdk'
 
 
-export const fetchData = (rfiTable) => {
+export const fetchData = (rfidTable) => {
     const docClient = new AWS.DynamoDB.DocumentClient()
 
     console.log("oi");

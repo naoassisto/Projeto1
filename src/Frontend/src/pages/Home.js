@@ -21,7 +21,7 @@ function Home() {
         // }
     // render(){
         const fetchDataFormDynamoDb = () => {
-            fetchData('rfiTable');
+            fetchData('rfidTable');
             console.log("oiiiiiiii");
           }
         // const information = fetchData('rfiTable');
@@ -29,6 +29,7 @@ function Home() {
             <>
             <NavigationBar></NavigationBar>
             {/* <p>{fetchData.luminosidade}</p> */}
+            {/* <p>{fetchData.items[1].localizacao}</p> */}
             <Graphicss></Graphicss>
             <div>
                     <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px',display:'inline-block', mt:'20px', ml:'95px' }}>
