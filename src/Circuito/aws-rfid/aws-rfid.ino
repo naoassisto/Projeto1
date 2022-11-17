@@ -1,4 +1,5 @@
-#include "secrets.h"
+// Inpotação das blibliotecas
+#include "Secrets.h"
 #include <WiFiClientSecure.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
@@ -6,17 +7,21 @@
 #include <MFRC522.h>
 #include <SPI.h>
 #include <Wire.h>
- 
+
+// Define os parametros de publicação dos dados para a aws
 #define AWS_IOT_PUBLISH_TOPIC   "esp32/pub"
 #define AWS_IOT_SUBSCRIBE_TOPIC "esp32/sub"
 
+// Define as portas dos sensores e leds 
 #define RFID_SS_SDA   21
 #define RFID_RST      14
-
 int buzzer = 16;
 int LED = 36;
 int LED2 = 41;
+
+// Cria duas variaves que são enviadas para a AWS
 char* h;
+const char* location = "sala1"; 
 
 MFRC522 rfidBase = MFRC522(RFID_SS_SDA, RFID_RST);
 
@@ -184,7 +189,8 @@ void connectAWS()
 void publishMessage()
 {
   StaticJsonDocument<200> doc;
-  doc["luminosidade"] = h;
+  doc["rfid"] = h;
+  doc["localizacao"] = location;
   char jsonBuffer[512];
   serializeJson(doc, jsonBuffer); // print to client
  
@@ -216,7 +222,7 @@ void setup()
 void loop()
 {
   //leitura do cartão
-  Serial.println("Lendo Cartao:");
+  //Serial.println("Lendo Cartao:");
   leitor->leCartao();
   //se o cartão foi lido
   if(leitor->cartaoFoiLido()){
@@ -237,12 +243,4 @@ void loop()
   }
   client.loop();
   
- 
-  // if (isnan(h))  // Check if any reads failed and exit early (to try again).
-  // {
-  //   Serial.println(F("Failed to read from DHT sensor!"));
-  //   return;
-  // }
- 
-
 }
