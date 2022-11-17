@@ -36,7 +36,7 @@ function Home() {
                             Rastrear Dispositivos
                         </Typography>
                     </Button>
-                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'549px', ml:'95px'}} onClick={() => fetchDataFormDynamoDb()}>
+                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'549px', ml:'95px'}} >
                         <Typography sx={{color:'#'}}>
                             Gerar Relatórios
                         </Typography>
@@ -49,3 +49,5 @@ function Home() {
 //   }
   
 export default Home;
+
+// onClick={() => fetchDataFormDynamoDb()}

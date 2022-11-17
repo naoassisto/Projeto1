@@ -13,7 +13,7 @@ import { ConfigurationOptions } from 'aws-sdk'
 
 
 const configuration = ConfigurationOptions = {
-    region: 'sa-east-1',
+    region: 'sa-east-2',
     secretAccessKey: 'AKIA2XG46BGXBIM7FA46',
     accessKeyId: 'fl+RuDyZhbZD+bilEv4EZLn8E1b5srh1cn13sTXP'
 }
