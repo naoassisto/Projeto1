@@ -1,17 +1,26 @@
-// import * as AWS from 'aws-sdk'
+import * as AWS from 'aws-sdk'
 
-// const docClient = new AWS.DynamoDB.DocumentClient()
 
-// export const fetchData = (rfiTable) => {
-//     console.log("oi");
-//     var params = {
-//         TableName: 'rfiTable'
-//     }
+export const fetchData = (rfiTable) => {
+    const docClient = new AWS.DynamoDB.DocumentClient()
 
-//     docClient.scan(params, function (err, data) {
-//         if (!err) {
-//             console.log("oiii2");
-//             console.log(data)
-//         }
-//     })
-// }
+    console.log("oi");
+    var params = {
+        TableName: 'rfiTable',
+        secretAccessKey: 'AMnwKsrva/BwVSOnyKh+KoMQkfTZMU/Hyrp3j7iw',
+        accessKeyId: 'AKIA2XG46BGXLSW5Z7LU'
+    }
+
+    try {
+        docClient.scan(params, function (err, data) {
+            if (!err) {
+                console.log("oiii2");
+                console.log(data);
+            }
+
+            console.log(err)
+        })
+    } catch (err) {
+        console.error(err);
+    }
+}

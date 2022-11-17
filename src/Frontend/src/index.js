@@ -9,24 +9,24 @@ import Graphicss from './pages/Graphics'
 import AdicionarDispositivo from './pages/AdicionarDispositivo';
 
 import * as AWS from 'aws-sdk'
-import { ConfigurationOptions } from 'aws-sdk'
+import {
+  ConfigurationOptions
+} from 'aws-sdk'
 
 
 const configuration = ConfigurationOptions = {
-    region: 'sa-east-2',
-    secretAccessKey: 'AKIA2XG46BGXBIM7FA46',
-    accessKeyId: 'fl+RuDyZhbZD+bilEv4EZLn8E1b5srh1cn13sTXP'
+  region: 'us-east-1',
+  secretAccessKey: 'AMnwKsrva/BwVSOnyKh+KoMQkfTZMU/Hyrp3j7iw',
+  accessKeyId: 'AKIA2XG46BGXLSW5Z7LU'
 }
 
 AWS.config.update(configuration)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>
-);
+root.render(<React.StrictMode> 
+  <Home />
+  </React.StrictMode>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
