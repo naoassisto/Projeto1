@@ -22,10 +22,9 @@ int LED2 = 41;
 // Cria duas variaves que são enviadas para a AWS
 char* h;
 const char* location = "sala1"; 
-
 MFRC522 rfidBase = MFRC522(RFID_SS_SDA, RFID_RST);
 
-
+// Funçãoes de leitura do sensor rfid
 // Classe relacionada à leitura do RFID, consegue declarar variáveis públicas, a serem utilizadas em qualquer lugar do código e podendo ser instaciadas
 class LeitorRFID{
   private:
@@ -128,10 +127,12 @@ LeitorRFID *leitor = NULL;
 
 
 
-///////////////////////////////////////////////////////////////////// 
+//Conexão com a internet e com o servidor da AWS
+//Chama a função de conexão com o wifi
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
  
+ //cria a função para conectar na aws
 void connectAWS()
 {
   WiFi.mode(WIFI_STA);
@@ -148,15 +149,15 @@ void connectAWS()
     delay(400);
   }
  
-  // Configure WiFiClientSecure to use the AWS IoT device credentials
+  // Configurar WiFiClientSecure para usar as credenciais do dispositivo AWS IoT
   net.setCACert(AWS_CERT_CA);
   net.setCertificate(AWS_CERT_CRT);
   net.setPrivateKey(AWS_CERT_PRIVATE);
  
-  // Connect to the MQTT broker on the AWS endpoint we defined earlier
+  // Conecte-se ao agente MQTT no endpoint da AWS
   client.setServer(AWS_IOT_ENDPOINT, 8883);
  
-  // Create a message handler
+  // Criar um manipulador de mensagens
   client.setCallback(messageHandler);
  
   Serial.println("Connecting to AWS IOT");
@@ -176,7 +177,7 @@ void connectAWS()
     return;
   }
  
-  // Subscribe to a topic
+  // Inscrever-se em um tópico
   client.subscribe(AWS_IOT_SUBSCRIBE_TOPIC);
  
   Serial.println("AWS IoT Connected!");
@@ -186,17 +187,19 @@ void connectAWS()
   
 }
  
+// Publicação da mensagem na aws 
 void publishMessage()
 {
   StaticJsonDocument<200> doc;
   doc["rfid"] = h;
   doc["localizacao"] = location;
   char jsonBuffer[512];
-  serializeJson(doc, jsonBuffer); // print to client
+  serializeJson(doc, jsonBuffer);
  
-  client.publish(AWS_IOT_PUBLISH_TOPIC, jsonBuffer);
+  client.publish(AWS_IOT_PUBLISH_TOPIC, jsonBuffer); // publica a mensagem para o cliente 
 }
- 
+
+// Cria o começo da mensagem para ser publicada 
 void messageHandler(char* topic, byte* payload, unsigned int length)
 {
   Serial.print("incoming: ");
@@ -210,6 +213,7 @@ void messageHandler(char* topic, byte* payload, unsigned int length)
  
 void setup()
 {
+  // Define as portas do led, do buzzer e inicia a conexão com a AWS
   Serial.begin(115200);
   pinMode(buzzer, OUTPUT);
   pinMode(LED, OUTPUT);
@@ -222,7 +226,6 @@ void setup()
 void loop()
 {
   //leitura do cartão
-  //Serial.println("Lendo Cartao:");
   leitor->leCartao();
   //se o cartão foi lido
   if(leitor->cartaoFoiLido()){
@@ -242,5 +245,4 @@ void loop()
     delay(1000);
   }
   client.loop();
-  
 }

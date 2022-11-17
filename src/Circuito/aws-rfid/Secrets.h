@@ -1,13 +1,12 @@
 #include <pgmspace.h>
  
 #define SECRET
-#define THINGNAME "ESP32_LDR"                         //change this
+#define THINGNAME "ESP32_LDR"                         
  
-const char WIFI_SSID[] = "Inteli-COLLEGE";               //change this
-const char WIFI_PASSWORD[] = "QazWsx@123";           //change this
-const char AWS_IOT_ENDPOINT[] = "a6sqbzo6oo76w-ats.iot.us-east-1.amazonaws.com";       //change this
+const char WIFI_SSID[] = "Inteli-COLLEGE";               
+const char WIFI_PASSWORD[] = "QazWsx@123";           
+const char AWS_IOT_ENDPOINT[] = "a6sqbzo6oo76w-ats.iot.us-east-1.amazonaws.com";       
  
-// Amazon Root CA 1
 static const char AWS_CERT_CA[] PROGMEM = R"EOF(
 -----BEGIN CERTIFICATE-----
 MIIDQTCCAimgAwIBAgITBmyfz5m/jAo54vB4ikPmljZbyjANBgkqhkiG9w0BAQsF
@@ -31,7 +30,7 @@ rqXRfboQnoZsG4q5WTP468SQvvG5
 -----END CERTIFICATE-----
 )EOF";
  
-// Device Certificate                                               //change this
+
 static const char AWS_CERT_CRT[] PROGMEM = R"KEY(
 -----BEGIN CERTIFICATE-----
 MIIDWTCCAkGgAwIBAgIUAf1MXxsyJh3OhtZeLCmJnT52wREwDQYJKoZIhvcNAQEL
@@ -57,7 +56,7 @@ a7TK7eyE1q3V9j6hXThgNGY2gbKUbKkSUnC6B4FplXYBYx7Srnzg+4GG85s3nzJI
  
 )KEY";
  
-// Device Private Key                                               //change this
+
 static const char AWS_CERT_PRIVATE[] PROGMEM = R"KEY(
 -----BEGIN RSA PRIVATE KEY-----
 MIIEowIBAAKCAQEAq4gZK5zkoMbZnp33MwNVVHd7l3Guk2o/p/pRoOQnEA3R3quS
