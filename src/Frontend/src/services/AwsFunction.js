@@ -6,7 +6,7 @@ export const fetchData = (rfiTable) => {
 
     console.log("oi");
     var params = {
-        TableName: 'rfiTable',
+        TableName: 'rfidTable',
         secretAccessKey: 'AMnwKsrva/BwVSOnyKh+KoMQkfTZMU/Hyrp3j7iw',
         accessKeyId: 'AKIA2XG46BGXLSW5Z7LU'
     }
