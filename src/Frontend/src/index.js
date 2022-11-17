@@ -13,9 +13,9 @@ import { ConfigurationOptions } from 'aws-sdk'
 
 
 const configuration = ConfigurationOptions = {
-    region: 'YOUR_REGION',
-    secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
-    accessKeyId: 'YOUR_ACCESS_KEY_ID'
+    region: 'sa-east-1',
+    secretAccessKey: 'AKIA2XG46BGXBIM7FA46',
+    accessKeyId: 'fl+RuDyZhbZD+bilEv4EZLn8E1b5srh1cn13sTXP'
 }
 
 AWS.config.update(configuration)

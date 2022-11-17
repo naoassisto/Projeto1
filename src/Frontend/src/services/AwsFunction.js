@@ -2,9 +2,11 @@ import * as AWS from 'aws-sdk'
 
 const docClient = new AWS.DynamoDB.DocumentClient()
 
-export const fetchData = (tableName) => {
+export const fetchData = (rfiTable) => {
+    // console.log("oi");
     var params = {
-        TableName: tableName
+        TableName: 'rfiTable'
+
     }
 
     docClient.scan(params, function (err, data) {
