@@ -24,23 +24,25 @@ function Home() {
             fetchData('rfiTable');
             console.log("oiiiiiiii");
           }
+        // const information = fetchData('rfiTable');
         return (
             <>
             <NavigationBar></NavigationBar>
+            {/* <p>{fetchData.luminosidade}</p> */}
             <Graphicss></Graphicss>
             <div>
-                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px',display:'inline-block', mt:'-300px', ml:'95px' }}>
+                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px',display:'inline-block', mt:'20px', ml:'95px' }}>
                         <Typography sx={{color:'#FFFFFF'}}>
                             Adicionar Dispositivo
                         </Typography>
                     </Button>
-                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'-300px', ml:'95px'}}>
+                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'20px', ml:'95px'}}>
                         <Typography sx={{color:'#FFFFFF'}}>
                             Rastrear Dispositivos
                         </Typography>
                     </Button>
-                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'549px', ml:'95px'}} onClick={() => fetchDataFormDynamoDb()}>
-                        <Typography sx={{color:'#'}}>
+                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'20px', ml:'95px'}} onClick={() => fetchDataFormDynamoDb()}>
+                        <Typography sx={{color:'#FFFFFF'}}>
                             Gerar Relatórios
                         </Typography>
                     </Button>

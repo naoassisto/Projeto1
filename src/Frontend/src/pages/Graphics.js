@@ -7,21 +7,20 @@ class Graphicss extends Component {
 		const options = {
 			animationEnabled: true,
 			title:{
-				text: "Monthly Sales - 2017"
+				text: "Proporção Diária da Localização de Ativos"
 			},
 			axisX: {
 				valueFormatString: "MMM"
 			},
 			axisY: {
-				title: "Sales (in USD)",
-				prefix: "$"
+				title: "Quantidade de Dispositivos"
 			},
 			data: [{
 				yValueFormatString: "$#,###",
-				xValueFormatString: "MMMM",
+				xValueFormatString: "Sala",
 				type: "spline",
 				dataPoints: [
-					{ x: new Date(2017, 0), y: 25060 },
+					{ x: String("Sala 1"), y: 25060 },
 					{ x: new Date(2017, 1), y: 27980 },
 					{ x: new Date(2017, 2), y: 42800 },
 					{ x: new Date(2017, 3), y: 32400 },
