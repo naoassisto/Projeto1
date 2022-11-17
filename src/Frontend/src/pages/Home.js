@@ -2,6 +2,7 @@ import NavigationBar from "../services/navbar";
 import Button from '@mui/material/Button';
 import { Typography } from "@mui/material";
 import { fetchData } from '../services/AwsFunction';
+import Graphicss from "./Graphics";
 
 function Home() {
         // constructor(props) {
@@ -26,13 +27,14 @@ function Home() {
         return (
             <>
             <NavigationBar></NavigationBar>
+            <Graphicss></Graphicss>
             <div>
-                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px',display:'inline-block', mt:'549px', ml:'95px' }}>
+                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px',display:'inline-block', mt:'-300px', ml:'95px' }}>
                         <Typography sx={{color:'#FFFFFF'}}>
                             Adicionar Dispositivo
                         </Typography>
                     </Button>
-                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'549px', ml:'95px'}}>
+                    <Button sx={{bgcolor:"#0082AF", borderRadius:'90px', width:'337px', height:'69px', display:'inline-block', mt:'-300px', ml:'95px'}}>
                         <Typography sx={{color:'#FFFFFF'}}>
                             Rastrear Dispositivos
                         </Typography>
