@@ -22,7 +22,6 @@ function Home() {
     // render(){
         const fetchDataFormDynamoDb = () => {
             fetchData('rfidTable');
-            console.log("oiiiiiiii");
           }
         // const information = fetchData('rfiTable');
         return (

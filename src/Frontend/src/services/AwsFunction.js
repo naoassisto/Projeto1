@@ -4,7 +4,6 @@ import * as AWS from 'aws-sdk'
 export const fetchData = (rfidTable) => {
     const docClient = new AWS.DynamoDB.DocumentClient()
 
-    console.log("oi");
     var params = {
         TableName: 'rfidTable',
         secretAccessKey: 'AMnwKsrva/BwVSOnyKh+KoMQkfTZMU/Hyrp3j7iw',
@@ -14,7 +13,6 @@ export const fetchData = (rfidTable) => {
     try {
         docClient.scan(params, function (err, data) {
             if (!err) {
-                console.log("oiii2");
                 console.log(data);
             }
 
