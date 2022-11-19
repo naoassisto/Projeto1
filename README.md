@@ -54,7 +54,7 @@ PlaceHolder
   * Definição da arquitetura da solução, pesquisa de contexto do parceiro e estruturação da plataforma
 * 2.0 - (05/11/2022)
 	*Adição de um wireframe, da futura interface web do projeto, segunda versão da arquitetura da solução e testes do prototipo inicial
-* 3.0 - Previsto para 18/11/2022
+* 3.0 - *Adição da 3 versão da arquitetura da solução, 2 versão do casos de teste, interações de úsuario. Criação do manual do úsuario. Atualização do codigo fonte e criação do frontend e backend 18/11/2022
 * 4.0 - Previsto para 02/12/2022
 * 5.0 - Previsto para 15/12/2022
 
