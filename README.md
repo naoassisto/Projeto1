@@ -67,7 +67,6 @@ PlaceHolder
 INTERNATIONAL BACCALAUREATE ORGANIZATION. About the IB. Disponível em:
 [https://www.ibo.org/about-the-ib/](https://www.ibo.org/about-the-ib/). Acesso em: 14/10/2022.
 
-INTERNATIONAL BACCALAUREATE ORGANIZATION. About the IB. Disponível em: https://www.ibo.org/about-the-ib/. Acesso em: 14/10/2022.
 BEACON SCHOOL. Bem-vindos à Beacon. Disponível em: https://www.beaconschool.com. br/quem-somos/bem-vindos-a-beacon/. Acesso em: 14/10/2022.
 
 ORGANIZAÇÃO DE ESCOLAS BILÍNGUES. Escolas Associadas. Disponível em:
