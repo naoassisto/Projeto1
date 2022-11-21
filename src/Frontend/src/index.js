@@ -16,8 +16,8 @@ import {
 
 const configuration = ConfigurationOptions = {
   region: 'us-east-1',
-  secretAccessKey: 'AMnwKsrva/BwVSOnyKh+KoMQkfTZMU/Hyrp3j7iw',
-  accessKeyId: 'AKIA2XG46BGXLSW5Z7LU'
+  secretAccessKey: ,
+  accessKeyId: 
 }
 
 AWS.config.update(configuration)

@@ -10,6 +10,9 @@ import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import logo from '../images/image_5.png';
+// import { Link } from 'react-router-dom'
+  
+  
 
 
 const settings = ['Home', 'Patrimônio', 'Relatórios', 'Registro de Dispositivo'];
@@ -20,7 +23,7 @@ const NavigationBar = () => {
   
   const pagesMax = [
     { name: "Home", link: "/Home" },
-    { name: "Patrimônio", link: "/patrimonio" },
+    { name: "Patrimônio", link: "/patrimonio"  },
     { name: "Relatórios", link: "/relatorios" },
     { name: "Registro de Dispositivo", link: "/registro" }
   ];

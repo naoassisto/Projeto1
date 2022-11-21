@@ -6,8 +6,8 @@ export const fetchData = (rfidTable) => {
 
     var params = {
         TableName: 'rfidTable',
-        secretAccessKey: 'AMnwKsrva/BwVSOnyKh+KoMQkfTZMU/Hyrp3j7iw',
-        accessKeyId: 'AKIA2XG46BGXLSW5Z7LU'
+        secretAccessKey: ,
+        accessKeyId: 
     }
 
     try {
