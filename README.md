@@ -69,12 +69,16 @@ INTERNATIONAL BACCALAUREATE ORGANIZATION. About the IB. Disponível em:
 
 INTERNATIONAL BACCALAUREATE ORGANIZATION. About the IB. Disponível em: https://www.ibo.org/about-the-ib/. Acesso em: 14/10/2022.
 BEACON SCHOOL. Bem-vindos à Beacon. Disponível em: https://www.beaconschool.com. br/quem-somos/bem-vindos-a-beacon/. Acesso em: 14/10/2022.
+
 ORGANIZAÇÃO DE ESCOLAS BILÍNGUES. Escolas Associadas. Disponível em:
 https://www.oebi.com.br/. Acesso em: 17/10/2022.
+
 JORNAL ESTADO DE MINAS. A evolução da educação bilíngue pós-pandemia.
 08/09/2022. Disponível em: https://www.em.com.br/app/noticia/opiniao/2022/09/08/
 interna_opiniao,1392010/a-evolucao-da-educacao-bilingue-pos-pandemia.shtml. Acesso em:
 17/10/2022.
+
 AWS. Computação em nuvem com a AWS. Disponível em: https://aws.amazon.com/pt/ what-is-aws/?nc2=h_ql_le_int. Acesso em: 09/11/2022.
 SANTOS, R. Getting Started with ESP-NOW (ESP32 with Arduino IDE). Disponível em: https://randomnerdtutorials.com/esp-now-esp32-arduino-ide/. Acesso em: 10/11/2022.
+
 UPESY. Create a WiFi access point with an ESP32. Disponível em: https://www.upesy. com/blogs/tutorials/how-create-a-wifi-acces-point-with-esp32. Acesso em: 10/11/2022 
