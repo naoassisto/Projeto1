@@ -18,12 +18,28 @@ const configuration = ConfigurationOptions = {
   region: 'us-east-1'
 }
 
+
+
+
 AWS.config.update(configuration)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
 <React.StrictMode> 
+
+{/* <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter> */}
+
+
   <Home />
 </React.StrictMode>);
 
