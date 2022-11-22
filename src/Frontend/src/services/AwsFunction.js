@@ -5,9 +5,7 @@ export const fetchData = (rfidTable) => {
     const docClient = new AWS.DynamoDB.DocumentClient()
 
     var params = {
-        TableName: 'rfidTable',
-        secretAccessKey: ,
-        accessKeyId: 
+        TableName: 'rfidTable'
     }
 
     try {
