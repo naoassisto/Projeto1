@@ -12,6 +12,7 @@ import * as AWS from 'aws-sdk'
 import {
   ConfigurationOptions
 } from 'aws-sdk'
+import Patrimonio from './pages/Patrimonio';
 
 
 const configuration = ConfigurationOptions = {
