@@ -7,12 +7,12 @@ class Graphicss extends Component {
 		const options = {
 			animationEnabled: true,
 			title: {
-				text: "Customer Satisfaction"
+				text: "Quantidade de Dispositivos"
 			},
 			subtitles: [{
-				text: "71% Positive",
+				text: "80% Disp. Ativos",
 				verticalAlign: "center",
-				fontSize: 24,
+				fontSize: 21,
 				dockInsidePlotArea: true
 			}],
 			data: [{
@@ -21,17 +21,17 @@ class Graphicss extends Component {
 				indexLabel: "{name}: {y}",
 				yValueFormatString: "#,###'%'",
 				dataPoints: [
-					{ name: "Unsatisfied", y: 5 },
-					{ name: "Very Unsatisfied", y: 31 },
-					{ name: "Very Satisfied", y: 40 },
-					{ name: "Satisfied", y: 17 },
-					{ name: "Neutral", y: 7 }
+					{ name: "VL PC", y: 5 },
+					{ name: "Windows Notebook", y: 31 },
+					{ name: "Chromebooks", y: 40 },
+					{ name: "iPad", y: 17 },
+					{ name: "Desktop", y: 7 }
 				]
 			}]
 		}
 		return (
 		<div>
-			<CanvasJSChart options = {options}
+			<CanvasJSChart options = {options} 
 				/* onRef={ref => this.chart = ref} */
 			/>
 			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
