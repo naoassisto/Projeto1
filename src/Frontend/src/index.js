@@ -7,12 +7,15 @@ import Home from './pages/Home'
 import SelectRastreio from './pages/SelecaoRastreio'
 import Graphicss from './pages/Graphics'
 import AdicionarDispositivo from './pages/AdicionarDispositivo';
+import Login from "./pages/Login";
+import Tabela from './pages/ReactTable';
+import Relatorios from './pages/Relatorios';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import * as AWS from 'aws-sdk'
 import {
   ConfigurationOptions
 } from 'aws-sdk'
-import Patrimonio from './pages/Patrimonio';
 
 
 const configuration = ConfigurationOptions = {
@@ -29,19 +32,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <React.StrictMode> 
 
-{/* <BrowserRouter>
+<BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+          <Route path="/" element={< Home/>} />
+          <Route path='/Home' element={<Home/>}/>
           <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
+          <Route path="relatorios" element={<Relatorios />} />
+          <Route path="registro" element={<AdicionarDispositivo />} />
+          <Route path="tabela" element={<Tabela />} />
       </Routes>
-    </BrowserRouter> */}
+</BrowserRouter>
 
-
-  <Home />
 </React.StrictMode>);
 
 // If you want to start measuring performance in your app, pass a function
