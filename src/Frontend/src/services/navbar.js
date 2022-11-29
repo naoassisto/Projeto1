@@ -25,13 +25,15 @@ const NavigationBar = () => {
     { name: "Home", link: "/Home" },
     { name: "Tabela", link: "/tabela"  },
     { name: "Relatórios", link: "/relatorios" },
-    { name: "Registro de Dispositivo", link: "/registro" }
+    { name: "Registro de Dispositivo", link: "/registro" },
+    { name: "Localização", link: "/location" }
   ];
   const pagesMin = [
     { name: "Home", link: "/Home" },
     { name: "Patrimônio", link: "/patrimonio" },
     { name: "Relatórios", link: "/relatorios" },
-    { name: "Registro de Dispositivo", link: "/registro" }
+    { name: "Registro de Dispositivo", link: "/registro" },
+    { name: "Localização", link: "/location" }
   ];
   
   const handleOpenNavMenu = (event) => {
