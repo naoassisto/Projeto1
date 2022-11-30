@@ -26,7 +26,7 @@ const NavigationBar = () => {
     { name: "Tabela", link: "/tabela"  },
     { name: "Relatórios", link: "/relatorios" },
     { name: "Registro de Dispositivo", link: "/registro" },
-    { name: "Localização", link: "/location" }
+    { name: "Localização", link: "/localizacao" }
   ];
   const pagesMin = [
     { name: "Home", link: "/Home" },
