@@ -8,8 +8,9 @@ import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
+import Button from '@mui/material/Button';
 
-console.log(logo);
+// console.log(logo);
 
 function Localizacao() {
 
@@ -53,8 +54,15 @@ function Localizacao() {
             </Select>
             </FormControl>
       </div>
-      <img src={logo} alt="Logo" width="1200" height="700" />
-
+      <div>
+      <Button sx={{width:'188px', height:'56.93px', mt:'1rem', ml:'16rem', backgroundColor:'#34C471', color:'#FFFFFF', borderRadius:'36px', display:'inline'}}>Adicionar</Button>
+      <Button sx={{width:'188px', height:'56.93px', mt:'1rem', ml:'14rem', backgroundColor:'#34C471', color:'#FFFFFF', borderRadius:'36px', display:'inline'}}>Revelar tudo</Button>
+      </div>
+      <div>
+      <Button sx={{width:'188px', height:'56.93px', mt:'2rem', ml:'16rem', backgroundColor:'#E64747', color:'#FFFFFF', borderRadius:'36px', display:'inline'}}>Remover</Button>
+      <Button sx={{width:'188px', height:'56.93px', mt:'2rem', ml:'14rem', backgroundColor:'#E64747', color:'#FFFFFF', borderRadius:'36px', display:'inline'}}>Remover tudo</Button>
+      </div>
+      <img src={logo} alt="Logo" width="1200" height="700"/>
     </>
   );
 }
