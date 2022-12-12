@@ -25,8 +25,10 @@ A Beacon School, parceiro referente a este projeto, encontra dificuldades para g
 
 |--> documentos<br>
   &emsp;| --> outros <br>
-  &emsp;| placeholder.pdf<br>
-  &emsp;| placeholder.docx<br>
+  &emsp;| T2_G1_V1_DocIoT.pdf<br>
+  &emsp;| T2_G1_V1_DocIoT.docx<br>
+  &emsp;| T2_G1_V1_Manual_IoT.pdf<br>
+  &emsp;| T2_G1_V1_Manual_IoT.docx<br>
 |--> imagens<br>
 |--> src<br>
   &emsp;|--> Backend<br>
